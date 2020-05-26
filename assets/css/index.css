@@ -85,3 +85,16 @@ b {
   color: #fff;
   padding: 1em .5em;
 }
+
+@media screen and (max-width: 767px) {
+  .brand .logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .brand .name {
+    margin: 0;
+    font-size: 15vw;
+  }
+}
