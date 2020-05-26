@@ -1,0 +1,87 @@
+@font-face {
+  font-family: 'Ubuntu Titling';
+  src: url('../fonts/ubuntu-titling.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --primary: #2bb673;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  font-weight: 300;
+}
+
+b {
+  font-weight: 600;
+}
+
+.top {
+  font-family: 'Ubuntu Titling';
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #eee;
+  padding: 1rem;
+}
+
+.brand .logo {
+  background-image: url('../graphics/logo.svg');
+  width: 12rem;
+  height: 12rem;
+  max-width: 80vw;
+  max-height: 80vw;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.brand .name {
+  font-family: 'Ubuntu Titling';
+  font-size: 5rem;
+  margin-left: 2rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.brand .button {
+  font-family: sans-serif;
+  padding: 1em .5em;
+  max-width: 12rem;
+  text-align: center;
+  border-radius: .5rem;
+  background: #fff;
+  box-shadow: 0 0 .5rem #ccc;
+  cursor: pointer;
+  text-decoration: none;
+  color: #222;
+  transition: background-color .2s;
+}
+
+.brand .button:hover {
+  background: #f7f7f7;
+}
+
+.info {
+  padding: 1rem 10vw;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.disclaimer {
+  background-color: #903;
+  color: #fff;
+  padding: 1em .5em;
+}
