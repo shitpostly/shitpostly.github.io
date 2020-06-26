@@ -70,6 +70,9 @@ b {
 .brand .button:hover {
   background: #f7f7f7;
 }
+.brand .button:active {
+  background: #f0f0f0;
+}
 
 .info {
   padding: 1rem 10vw;
@@ -84,6 +87,7 @@ b {
   background-color: #903;
   color: #fff;
   padding: 1em .5em;
+  font-size: 12px;
 }
 
 @media screen and (max-width: 767px) {
