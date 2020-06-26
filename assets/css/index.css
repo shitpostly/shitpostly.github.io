@@ -23,13 +23,14 @@ b {
   font-weight: 600;
 }
 
-.top, .install, .spot, .disclaimer {
+.top, .install, .spot {
+  font-family: 'Ubuntu Titling';
+  font-size: 2rem;
+  min-height: 100vh;
   scroll-snap-align: start;
 }
 
 .top {
-  font-family: 'Ubuntu Titling';
-  min-height: 100vh;
   display: grid;
   grid-template-rows: 1fr 1fr;
 }
@@ -61,8 +62,9 @@ b {
   vertical-align: middle;
 }
 
-.brand .button {
+.button {
   font-family: sans-serif;
+  font-size: 1rem;
   padding: 1em .5em;
   max-width: 12rem;
   text-align: center;
@@ -75,10 +77,15 @@ b {
   transition: background-color .2s;
 }
 
-.brand .button:hover {
+.button b {
+  color: #222 !important;
+  font-weight: 600;
+}
+
+.button:hover {
   background: #f7f7f7;
 }
-.brand .button:active {
+.button:active {
   background: #f0f0f0;
 }
 
@@ -91,11 +98,54 @@ b {
   color: #fff;
 }
 
+.install {
+  background-color: #eee;
+  color: #222;
+  padding: 0 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.install b {
+  color: var(--primary);
+}
+
+.install p {
+  margin: 1rem 0;
+}
+
+.install .button {
+  margin-top: 2rem;
+  margin-bottom: 10rem;
+}
+
+.spot {
+  background-color: var(--primary);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.spot .video {
+  display: block;
+  width: 80vmin;
+  height: 45vmin;
+  border: 2px solid #fff;
+  border-radius: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
 .disclaimer {
   background-color: #903;
   color: #fff;
   padding: 1em .5em;
-  font-size: 12px;
+  font-size: .75rem;
+  scroll-snap-align: start;
 }
 
 @media screen and (max-width: 767px) {
