@@ -8,6 +8,10 @@
 :root {
   --primary: #2bb673;
 }
+/* i'm pretty sure that this is not how it's supposed to be used but whatever */
+html {
+  scroll-snap-type: y mandatory;
+}
 
 body {
   margin: 0;
@@ -17,6 +21,10 @@ body {
 
 b {
   font-weight: 600;
+}
+
+.top, .install, .spot, .disclaimer {
+  scroll-snap-align: start;
 }
 
 .top {
