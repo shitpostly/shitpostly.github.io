@@ -1,8 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
   document.querySelector('a.jump-button').addEventListener('click', function (e) {
-    document.querySelector('.install').scrollIntoView({behavior: 'smooth'});
+    document.querySelector('.install').scrollIntoView({ behavior: 'smooth' });
     e.preventDefault();
   });
+
+  window.scrollTo({ top: 0 });
 
   let nameContainer = document.querySelector('.top .brand .name');
   let name = nameContainer.innerText;
