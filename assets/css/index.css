@@ -17,6 +17,18 @@ body {
   margin: 0;
   font-family: sans-serif;
   font-weight: 300;
+  background-color: #eee;
+  position: fixed;
+}
+
+body.content-loaded {
+  animation: enable-scrolling 1s 1.5s forwards;
+}
+
+@keyframes enable-scrolling {
+  to {
+    position: initial;
+  }
 }
 
 b {
@@ -57,9 +69,31 @@ b {
 .brand .name {
   font-family: 'Ubuntu Titling';
   font-size: 5rem;
+  color: #444;
   margin-left: 2rem;
   display: inline-block;
   vertical-align: middle;
+}
+
+.brand .name .letter {
+  opacity: 0;
+  transition: .1s;
+}
+
+.brand .button {
+  opacity: 0;
+  transform: translateY(-5rem);
+}
+
+.content-loaded .brand .button {
+  animation: top-button-build .5s 1s forwards;
+}
+
+@keyframes top-button-build {
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .button {
@@ -69,16 +103,16 @@ b {
   max-width: 12rem;
   text-align: center;
   border-radius: .5rem;
-  background: #fff;
+  background: #f0f0f0;
   box-shadow: 0 0 .5rem #ccc;
   cursor: pointer;
   text-decoration: none;
-  color: #222;
+  color: #444;
   transition: background-color .2s;
 }
 
 .button b {
-  color: #222 !important;
+  color: #444 !important;
   font-weight: 600;
 }
 
@@ -86,7 +120,7 @@ b {
   background: #f7f7f7;
 }
 .button:active {
-  background: #f0f0f0;
+  background: #e0e0e0;
 }
 
 .info {
@@ -96,11 +130,22 @@ b {
   align-items: center;
   background-color: var(--primary);
   color: #fff;
+  transform: translateY(100%);
+}
+
+.content-loaded .info {
+  animation: top-info-build .5s 1.5s forwards;
+}
+
+@keyframes top-info-build {
+  to {
+    transform: none;
+  }
 }
 
 .install {
   background-color: #eee;
-  color: #222;
+  color: #444;
   padding: 0 6rem;
   display: flex;
   flex-direction: column;
