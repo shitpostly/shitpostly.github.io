@@ -167,6 +167,7 @@ b {
 }
 
 .spot {
+  position: relative;
   background-color: var(--primary);
   color: #fff;
   display: flex;
@@ -183,6 +184,19 @@ b {
   border-radius: 1rem;
   margin-top: 2rem;
   margin-bottom: 4rem;
+}
+
+.spot .github {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  color: #fff;
+  text-decoration: underline;
+  font-size: 1rem;
+}
+
+.spot .github:hover {
+  text-decoration: none;
 }
 
 .disclaimer {
