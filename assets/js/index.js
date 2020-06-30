@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   window.scrollTo({ top: 0 });
+  location.hash = ''
 
   let nameContainer = document.querySelector('.top .brand .name');
   let name = nameContainer.innerText;
