@@ -21,4 +21,11 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   document.body.classList.add('content-loaded');
+
+  let bookmarkletButton = document.querySelector('a.button.bookmarklet-button');
+  fetch('https://raw.githubusercontent.com/shitpostly/bookmarklet/master/bookmarklet.min.js')
+    .then(response => response.text())
+    .then((data) => {
+      bookmarkletButton.href = data
+    });
 });
