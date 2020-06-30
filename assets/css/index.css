@@ -18,15 +18,20 @@ body {
   font-family: sans-serif;
   font-weight: 300;
   background-color: #eee;
-  position: fixed;
 }
 
 body.content-loaded {
-  animation: enable-scrolling 1s 1.5s forwards;
+  animation: enable-scrolling 2.5s forwards;
 }
 
 @keyframes enable-scrolling {
-  to {
+  0% {
+    position: fixed;
+  }
+  99% {
+    position: fixed;
+  }
+  100% {
     position: initial;
   }
 }
@@ -45,6 +50,7 @@ b {
 .top {
   display: grid;
   grid-template-rows: 1fr 1fr;
+  overflow: hidden;
 }
 
 .brand {
