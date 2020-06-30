@@ -162,9 +162,32 @@ b {
 }
 
 .install .button {
-  margin-top: 2rem;
-  margin-bottom: 10rem;
+  margin: 2rem 0;
 }
+
+.install .compatibility {
+  text-align: center;
+  font-size: 1rem;
+  display: flex;
+}
+
+.install .compatibility .browsers, .install .compatibility .sites {
+  margin: 0 2rem;
+}
+
+.install .compatibility .browser, .install .compatibility .site {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  margin: 0 .5rem;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.install .compatibility .browser-firefox { background-image: url('../graphics/browser-firefox.svg') }
+.install .compatibility .browser-safari { background-image: url('../graphics/browser-safari.svg') }
+.install .compatibility .browser-chrome { background-image: url('../graphics/browser-chrome.svg') }
+.install .compatibility .site-reddit { background-image: url('../graphics/site-reddit.svg') }
+.install .compatibility .site-youtube { background-image: url('../graphics/site-youtube.svg') }
 
 .spot {
   position: relative;
