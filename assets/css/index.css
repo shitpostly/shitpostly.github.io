@@ -41,7 +41,7 @@ b {
 }
 
 .top, .install, .spot {
-  font-family: 'Ubuntu Titling';
+  font-family: 'Ubuntu Titling', sans-serif;
   font-size: 2rem;
   min-height: 100vh;
   scroll-snap-align: start;
@@ -157,6 +157,7 @@ b {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .install b {
@@ -169,6 +170,55 @@ b {
 
 .install .button {
   margin: 2rem 0;
+}
+
+.install .advanced {
+  color: var(--primary);
+  text-decoration: underline;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.install .advanced:hover {
+  text-decoration: none;
+}
+
+.install .tutorial {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.install .tutorial:target {
+  display: flex;
+}
+
+.install .tutorial .shade {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #000a;
+}
+
+.install .tutorial .popup {
+  background-color: #eee;
+  border-radius: .5rem;
+  border-top: .2rem solid var(--primary);
+  max-width: calc(80vw - 16rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 4rem;
+  z-index: 1;
+  overflow-y: auto;
 }
 
 .install .compatibility {
@@ -219,12 +269,15 @@ b {
   position: absolute;
   bottom: 1rem;
   right: 1rem;
-  color: #fff;
-  text-decoration: underline;
   font-size: 1rem;
 }
 
-.spot .github:hover {
+.spot .github a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.spot .github a:hover {
   text-decoration: none;
 }
 
