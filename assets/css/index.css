@@ -10,7 +10,9 @@
 }
 /* i'm pretty sure that this is not how it's supposed to be used but whatever */
 html {
-  scroll-snap-type: y mandatory;
+  /* @ArturDG didn't want scroll snapping */
+  /* scroll-snap-type: y mandatory; */
+  scroll-snap-type: y proximity;
 }
 
 body {
