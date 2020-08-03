@@ -12,7 +12,9 @@
 html {
   /* @ArturDG didn't want scroll snapping */
   /* scroll-snap-type: y mandatory; */
-  scroll-snap-type: y proximity;
+
+  /* turns out browsers suck, so i'll remove this as well */
+  /* scroll-snap-type: y proximity; */
 }
 
 body {
@@ -121,7 +123,7 @@ b {
 
 .button b {
   color: #444 !important;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .button:hover {
@@ -176,13 +178,30 @@ b {
 
 .install .advanced {
   color: var(--primary);
-  text-decoration: underline;
+  text-decoration: none;
   font-size: 1.5rem;
   margin-bottom: 1rem;
+  position: relative;
 }
 
-.install .advanced:hover {
-  text-decoration: none;
+.install .advanced::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-top: 2px solid currentColor;
+}
+
+.install .advanced:hover::after {
+  animation: fancy-underline .5s both;
+}
+
+@keyframes fancy-underline {
+  from { left: 0 }
+  50% { right: 0; left: 100% }
+  51% { right: 100%; left: 0 }
+  to { right: 0 }
 }
 
 .install .tutorial {
@@ -196,7 +215,7 @@ b {
   justify-content: center;
 }
 
-.install .tutorial:target {
+.install .tutorial.visible {
   display: flex;
 }
 
@@ -207,6 +226,23 @@ b {
   right: 0;
   left: 0;
   background-color: #000a;
+}
+
+.install .tutorial .shade::after {
+  content: '╳';
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  width: 1.5em;
+  height: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eee;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  border-radius: 50%;
 }
 
 .install .tutorial .popup {
@@ -302,4 +338,8 @@ b {
     margin: 0;
     font-size: 15vw;
   }
+}
+
+@media (prefers-color-scheme: dark) {
+
 }
