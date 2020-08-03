@@ -66,6 +66,20 @@ b {
   padding: 1rem;
 }
 
+.brand .wichs {
+  background-image: url('../graphics/wichs.svg');
+  background-repeat: no-repeat;
+  width: 6rem;
+  height: 2rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  opacity: .8;
+  transition: .2s;
+  cursor: pointer;
+}
+.brand .wichs:hover { opacity: 1 }
+
 .brand .logo {
   background-image: url('../graphics/logo.svg');
   width: 12rem;
