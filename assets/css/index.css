@@ -147,6 +147,10 @@ b {
   background: #e0e0e0;
 }
 
+[data-after-content]::after {
+  content: attr(data-after-content);
+}
+
 .info {
   padding: 1rem 10vw;
   font-size: 2rem;
