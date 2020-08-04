@@ -7,6 +7,9 @@
 
 :root {
   --primary: #2bb673;
+  --background: #eee;
+  --dark: #444;
+  --light: #fff;
 }
 /* i'm pretty sure that this is not how it's supposed to be used but whatever */
 html {
@@ -21,7 +24,7 @@ body {
   margin: 0;
   font-family: sans-serif;
   font-weight: 300;
-  background-color: #eee;
+  background-color: var(--background);
 }
 
 body.content-loaded {
@@ -62,7 +65,7 @@ b {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  background-color: #eee;
+  background-color: var(--background);
   padding: 1rem;
 }
 
@@ -93,7 +96,7 @@ b {
 .brand .name {
   font-family: 'Ubuntu Titling';
   font-size: 5rem;
-  color: #444;
+  color: var(--dark);
   margin-left: 2rem;
   display: inline-block;
   vertical-align: middle;
@@ -157,7 +160,7 @@ b {
   display: flex;
   align-items: center;
   background-color: var(--primary);
-  color: #fff;
+  color: var(--light);
   transform: translateY(100%);
 }
 
@@ -172,8 +175,8 @@ b {
 }
 
 .install {
-  background-color: #eee;
-  color: #444;
+  background-color: var(--background);
+  color: var(--dark);
   padding: 0 6rem;
   display: flex;
   flex-direction: column;
@@ -257,7 +260,7 @@ b {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #eee;
+  background-color: var(--background);
   color: var(--primary);
   border: 2px solid var(--primary);
   border-radius: 50%;
@@ -265,7 +268,7 @@ b {
 }
 
 .install .tutorial .popup {
-  background-color: #eee;
+  background-color: var(--background);
   border-radius: .5rem;
   border-top: .2rem solid var(--primary);
   max-width: calc(80vw - 16rem);
@@ -305,7 +308,7 @@ b {
 .spot {
   position: relative;
   background-color: var(--primary);
-  color: #fff;
+  color: var(--light);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -316,7 +319,7 @@ b {
   display: block;
   width: 80vmin;
   height: 45vmin;
-  border: 2px solid #fff;
+  border: 2px solid var(--light);
   border-radius: 1rem;
   margin-top: 2rem;
   margin-bottom: 4rem;
@@ -330,7 +333,7 @@ b {
 }
 
 .spot .github a {
-  color: #fff;
+  color: var(--light);
   text-decoration: underline;
 }
 
@@ -378,6 +381,11 @@ b {
   }
 }
 
-@media (prefers-color-scheme: dark) {
-
-}
+/* was a bad idea */
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #444;
+    --dark: #eee;
+    --light: #222;
+  }
+} */
