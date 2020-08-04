@@ -261,6 +261,7 @@ b {
   color: var(--primary);
   border: 2px solid var(--primary);
   border-radius: 50%;
+  z-index: 2;
 }
 
 .install .tutorial .popup {
@@ -345,6 +346,17 @@ b {
   scroll-snap-align: start;
 }
 
+.mobile-warning {
+  background-color: #ccc;
+  color: #777;
+  padding: 1em .5em;
+  display: none;
+}
+
+.mobile-warning b {
+  font-weight: 500;
+}
+
 @media screen and (max-width: 767px) {
   .brand .logo-container {
     display: flex;
@@ -355,6 +367,14 @@ b {
   .brand .name {
     margin: 0;
     font-size: 15vw;
+  }
+
+  .install .tutorial .popup {
+    max-width: 100%;
+  }
+
+  .mobile-warning {
+    display: block;
   }
 }
 
